@@ -1,15 +1,17 @@
 import 'dart:io';
 import 'dart:math';
+
 import 'package:dio/adapter.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:logging/logging.dart';
 import 'package:path/path.dart' as path_utils;
-import 'package:weather_app_demo/business_logic/networking/net_endpoints.dart';
-import 'package:weather_app_demo/business_logic/networking/net_request_methods.dart';
-import 'package:weather_app_demo/business_logic/networking/net_response.dart';
+
+import 'net_endpoints.dart';
 import 'net_exceptions.dart';
 import 'net_json_decoder.dart';
+import 'net_request_methods.dart';
+import 'net_response.dart';
 
 /// Callback to listen the progress for sending/receiving data.
 ///

@@ -4,7 +4,9 @@ void main() {
   runApp(const MyApp());
 }
 
+///
 class MyApp extends StatelessWidget {
+  ///
   const MyApp({super.key});
 
   // This widget is the root of your application.
@@ -29,7 +31,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
+///
 class MyHomePage extends StatefulWidget {
+  ///
   const MyHomePage({super.key, required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning
@@ -41,6 +45,7 @@ class MyHomePage extends StatefulWidget {
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
 
+  ///
   final String title;
 
   @override
