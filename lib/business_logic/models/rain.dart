@@ -6,28 +6,28 @@ class Rain extends Equatable {
   final double oneHour;
 
   /// Rain volume for the last 3 hours, mm
-  final double threeHours;
+  final double threeHour;
 
   /// Creates a new [Rain] Instance
   Rain({
     required this.oneHour,
-    required this.threeHours,
+    required this.threeHour,
   });
 
   @override
   List<Object?> get props => [
         oneHour,
-        threeHours,
+        threeHour,
       ];
 
   /// Returns a copy of the rain data modified by the provided data.
   Rain copyWith(
     double? oneHour,
-    double? threeHours,
+    double? threeHour,
   ) {
     return Rain(
       oneHour: oneHour ?? this.oneHour,
-      threeHours: threeHours ?? this.threeHours,
+      threeHour: threeHour ?? this.threeHour,
     );
   }
 }

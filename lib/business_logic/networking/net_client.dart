@@ -69,6 +69,9 @@ class NetClient {
   /// Defaults to a [NetJson]
   final NetJson backgroundJsonHandler;
 
+  /// Endpoint paths to be used by this [NetClient].
+  final NetEndpoints netEndpoints;
+
   final path_utils.Context? _pathContext;
 
   /// Creates a new [NetClient].
@@ -81,6 +84,7 @@ class NetClient {
     this.logType = NetLogType.none,
     this.jsonHandler = const NetJson(),
     this.backgroundJsonHandler = const NetJson(),
+    this.netEndpoints = const NetEndpoints(),
     Map<String, dynamic>? defaultHeaders,
     HttpClient? Function(HttpClient)? onHttpClientCreate,
   })  : client = Dio(

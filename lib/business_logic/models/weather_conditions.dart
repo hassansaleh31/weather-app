@@ -3,7 +3,7 @@ import 'package:equatable/equatable.dart';
 /// The weather condition
 class WeatherConditions extends Equatable {
   /// The id of the condition
-  final String id;
+  final int id;
 
   /// The main category of the condition
   final WeatherCondition category;
@@ -12,14 +12,14 @@ class WeatherConditions extends Equatable {
   final String description;
 
   /// The icon of the condition
-  final String icon;
+  final String? icon;
 
   /// Creates a new [WeatherConditions].
   WeatherConditions({
     required this.id,
     required this.category,
     required this.description,
-    required this.icon,
+    this.icon,
   });
 
   @override
@@ -33,7 +33,7 @@ class WeatherConditions extends Equatable {
   /// Returns a copy of the weather conditions data modified by the provided
   /// data.
   WeatherConditions copyWith(
-    String? id,
+    int? id,
     WeatherCondition? category,
     String? description,
     String? icon,
@@ -104,7 +104,7 @@ enum WeatherCondition {
   const WeatherCondition(this.value);
 
   /// Returns the corresponding category based on the value
-  static WeatherCondition getByValue(String value) {
+  static WeatherCondition getByValue(String? value) {
     for (var condtion in WeatherCondition.values) {
       if (condtion.value == value) return condtion;
     }

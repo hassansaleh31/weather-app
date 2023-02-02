@@ -6,28 +6,28 @@ class Snow extends Equatable {
   final double oneHour;
 
   /// Snow volume for the last 3 hours, mm
-  final double threeHours;
+  final double threeHour;
 
   /// Creates a new [Snow] Instance
   Snow({
     required this.oneHour,
-    required this.threeHours,
+    required this.threeHour,
   });
 
   @override
   List<Object?> get props => [
         oneHour,
-        threeHours,
+        threeHour,
       ];
 
   /// Returns a copy of the snow data modified by the provided data.
   Snow copyWith(
     double? oneHour,
-    double? threeHours,
+    double? threeHour,
   ) {
     return Snow(
       oneHour: oneHour ?? this.oneHour,
-      threeHours: threeHours ?? this.threeHours,
+      threeHour: threeHour ?? this.threeHour,
     );
   }
 }
