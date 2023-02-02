@@ -12,7 +12,7 @@ class WeatherRepository {
     required WeatherProvider provider,
   }) : _provider = provider;
 
-  /// Fetches the current weather
+  /// Fetches the current weather in the provided location
   Future<CurrentWeather> getCurrentWeather({
     required Coordinates coordinates,
     bool forceRefresh = false,
