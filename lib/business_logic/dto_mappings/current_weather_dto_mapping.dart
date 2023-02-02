@@ -1,4 +1,3 @@
-import '../models/coordinates.dart';
 import './clouds_dto_mapping.dart';
 import './coordinates_dto_mapping.dart';
 import './main_conditions_dto_mapping.dart';
@@ -8,6 +7,7 @@ import './weather_dto_mapping.dart';
 import './wind_dto_mapping.dart';
 import '../dtos/current_weather_dto.dart';
 import '../models/clouds.dart';
+import '../models/coordinates.dart';
 import '../models/current_weather.dart';
 import '../models/main_conditions.dart';
 import '../models/rain.dart';
