@@ -19,7 +19,7 @@ class CurrentWeatherDTO {
   final MainConditionsDTO? mainConditions;
 
   /// Visibility in meter. The maximum value of the visibility is 10km
-  final String? visibility;
+  final int? visibility;
 
   /// The wind conditions
   final WindDTO? wind;
@@ -71,7 +71,7 @@ class CurrentWeatherDTO {
       coordinates: CoordinatesDTO.fromJson(json['coord']),
       weather: WeatherConditionsDTO.fromJson(json['weather']),
       mainConditions: MainConditionsDTO.fromJson(json['main']),
-      visibility: parseString(json['visibility']),
+      visibility: parseInt(json['visibility']),
       wind: WindDTO.fromJson(json['wind']),
       clouds: CloudsDTO.fromJson(json['clouds']),
       rain: RainDTO.fromJson(json['rain']),
