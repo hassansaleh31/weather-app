@@ -1,5 +1,5 @@
-import '../dtos/snow_dto.dart';
-import '../models/snow.dart';
+import '../../data_layer/dtos/snow_dto.dart';
+import '../../domain_layer/models/snow.dart';
 
 /// Extension that provides mappings for [SnowDTO]
 extension SnowDTOMapping on SnowDTO {

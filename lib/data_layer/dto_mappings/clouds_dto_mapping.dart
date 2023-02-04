@@ -1,5 +1,5 @@
-import '../dtos/clouds_dto.dart';
-import '../models/clouds.dart';
+import '../../data_layer/dtos/clouds_dto.dart';
+import '../../domain_layer/models/clouds.dart';
 
 /// Extension that provides mappings for [CloudsDTO]
 extension CloudsDTOMapping on CloudsDTO {

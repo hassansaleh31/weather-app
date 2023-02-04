@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:location/location.dart';
 
-import '../../models/coordinates.dart';
-import '../../use_cases/get_current_weather_use_case.dart';
+import '../../../domain_layer/models/coordinates.dart';
+import '../../../domain_layer/use_cases/get_current_weather_use_case.dart';
 import '../base/base_state.dart';
 import 'current_weather_state.dart';
 

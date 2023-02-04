@@ -1,5 +1,5 @@
-import '../dtos/wather_conditions_dto.dart';
-import '../models/weather_conditions.dart';
+import '../../data_layer/dtos/wather_conditions_dto.dart';
+import '../../domain_layer/models/weather_conditions.dart';
 
 /// Extension that provides mappings for [WeatherConditionsDTO]
 extension WeatherDTOMapping on WeatherConditionsDTO {

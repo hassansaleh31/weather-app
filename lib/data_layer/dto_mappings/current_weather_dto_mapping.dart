@@ -5,15 +5,15 @@ import './rain_dto_mapping.dart';
 import './snow_dto_mapping.dart';
 import './weather_dto_mapping.dart';
 import './wind_dto_mapping.dart';
-import '../dtos/current_weather_dto.dart';
-import '../models/clouds.dart';
-import '../models/coordinates.dart';
-import '../models/current_weather.dart';
-import '../models/main_conditions.dart';
-import '../models/rain.dart';
-import '../models/snow.dart';
-import '../models/weather_conditions.dart';
-import '../models/wind.dart';
+import '../../data_layer/dtos/current_weather_dto.dart';
+import '../../domain_layer/models/clouds.dart';
+import '../../domain_layer/models/coordinates.dart';
+import '../../domain_layer/models/current_weather.dart';
+import '../../domain_layer/models/main_conditions.dart';
+import '../../domain_layer/models/rain.dart';
+import '../../domain_layer/models/snow.dart';
+import '../../domain_layer/models/weather_conditions.dart';
+import '../../domain_layer/models/wind.dart';
 import '../networking/json_parser.dart';
 
 /// Extension that provides mappings for [CurrentWeatherDTO]

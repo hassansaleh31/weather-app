@@ -1,5 +1,5 @@
-import '../dtos/rain_dto.dart';
-import '../models/rain.dart';
+import '../../data_layer/dtos/rain_dto.dart';
+import '../../domain_layer/models/rain.dart';
 
 /// Extension that provides mappings for [RainDTO]
 extension RainDTOMapping on RainDTO {

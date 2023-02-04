@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:equatable/equatable.dart';
 
-import '../../networking/net_exceptions.dart';
+import '../../../data_layer/networking/net_exceptions.dart';
 
 /// The error types that can occur inside a cubit.
 enum CubitErrorType {

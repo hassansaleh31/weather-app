@@ -1,5 +1,5 @@
-import '../dtos/current_weather_dto.dart';
-import '../models/coordinates.dart';
+import '../../data_layer/dtos/current_weather_dto.dart';
+import '../../domain_layer/models/coordinates.dart';
 import '../networking/net_client.dart';
 import '../networking/net_request_methods.dart';
 

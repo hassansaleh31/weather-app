@@ -1,6 +1,6 @@
+import '../../domain_layer/models/coordinates.dart';
+import '../../domain_layer/models/current_weather.dart';
 import '../dto_mappings/current_weather_dto_mapping.dart';
-import '../models/coordinates.dart';
-import '../models/current_weather.dart';
 import '../providers/weather_provider.dart';
 
 /// A repository that can be used to fetch weather data

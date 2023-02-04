@@ -1,6 +1,6 @@
+import '../../data_layer/repositories/weather_repository.dart';
 import '../models/coordinates.dart';
 import '../models/current_weather.dart';
-import '../repositories/weather_repository.dart';
 
 /// Use case for getting the current weather conditions.
 class GetCurrentWeatherUseCase {

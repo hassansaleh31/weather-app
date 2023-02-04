@@ -1,5 +1,5 @@
-import '../dtos/main_conditions_dto.dart';
-import '../models/main_conditions.dart';
+import '../../data_layer/dtos/main_conditions_dto.dart';
+import '../../domain_layer/models/main_conditions.dart';
 
 /// Extension that provides mappings for [MainConditionsDTO]
 extension MainConditionsDTOMapping on MainConditionsDTO {

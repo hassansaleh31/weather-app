@@ -1,6 +1,6 @@
-import '../../dto_mappings/current_weather_dto_mapping.dart';
-import '../../dtos/current_weather_dto.dart';
-import '../../models/current_weather.dart';
+import '../../../data_layer/dto_mappings/current_weather_dto_mapping.dart';
+import '../../../data_layer/dtos/current_weather_dto.dart';
+import '../../../domain_layer/models/current_weather.dart';
 import '../base/base_state.dart';
 
 /// The available busy actions that the cubit can perform.
