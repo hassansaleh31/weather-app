@@ -73,7 +73,7 @@ void main() {
   });
 
   test(
-    'Should return the current weather',
+    'Should fetch current weather DTO',
     () async {
       final weather = await _provider.getCurrentWeather(
         coordinates: Coordinates(
@@ -82,10 +82,7 @@ void main() {
         ),
       );
 
-      expect(
-        weather.clouds?.all,
-        100,
-      );
+      expect(weather.clouds?.all, 100);
 
       expect(weather.coordinates?.lon, 10.99);
       expect(weather.coordinates?.lat, 44.34);
@@ -123,6 +120,16 @@ void main() {
       expect(weather.wind?.speed, 0.62);
       expect(weather.wind?.deg, 349);
       expect(weather.wind?.gust, 1.18);
+
+      verify(() => _client.request(
+            NetEndpoints().currentWeather,
+            method: NetRequestMethods.get,
+            forceRefresh: false,
+            queryParameters: {
+              'lon': 10.99,
+              'lat': 44.34,
+            },
+          )).called(1);
     },
   );
 }
