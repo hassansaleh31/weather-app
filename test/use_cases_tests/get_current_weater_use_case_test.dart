@@ -46,8 +46,8 @@ final response = CurrentWeather(
   snow: Snow(oneHour: 16, threeHour: 17),
   dateTime: _currentDate,
   country: "LB",
-  sunrise: 18,
-  sunset: 19,
+  sunrise: _currentDate,
+  sunset: _currentDate,
   timezone: 20,
 );
 

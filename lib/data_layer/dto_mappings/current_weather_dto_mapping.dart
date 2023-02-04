@@ -61,10 +61,10 @@ extension CurrentWeatherDTOMapping on CurrentWeatherDTO {
             oneHour: 0,
             threeHour: 0,
           ),
-      dateTime: parseDate(dateTime) ?? DateTime.now(),
+      dateTime: parseDate(dateTime, isUTC: true) ?? DateTime.now(),
       country: country ?? '',
-      sunrise: sunrise ?? 0,
-      sunset: sunset ?? 0,
+      sunrise: parseDate(sunrise, isUTC: true) ?? DateTime.now(),
+      sunset: parseDate(sunset, isUTC: true) ?? DateTime.now(),
       timezone: timezone ?? 0,
     );
   }

@@ -40,11 +40,11 @@ class CurrentWeather extends Equatable {
   ///  Country code (GB, JP etc.)
   final String country;
 
-  /// Sunrise time, unix, UTC
-  final int sunrise;
+  /// Sunrise time
+  final DateTime sunrise;
 
-  /// Sunset time, unix, UTC
-  final int sunset;
+  /// Sunset time
+  final DateTime sunset;
 
   /// Shift in seconds from UTC
   final int timezone;
@@ -95,8 +95,8 @@ class CurrentWeather extends Equatable {
     Snow? snow,
     DateTime? dateTime,
     String? country,
-    int? sunrise,
-    int? sunset,
+    DateTime? sunrise,
+    DateTime? sunset,
     int? timezone,
   ) {
     return CurrentWeather(
