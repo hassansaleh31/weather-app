@@ -20,11 +20,11 @@ class WindDTO {
   });
 
   /// Creates a [WindDTO] from the supplied JSON object
-  factory WindDTO.fromJson(Map<String, dynamic> json) {
+  factory WindDTO.fromJson(Map<String, dynamic>? json) {
     return WindDTO(
-      speed: parseDouble(json['speed']),
-      deg: parseDouble(json['deg']),
-      gust: parseDouble(json['gust']),
+      speed: parseDouble(json?['speed']),
+      deg: parseDouble(json?['deg']),
+      gust: parseDouble(json?['gust']),
     );
   }
 }

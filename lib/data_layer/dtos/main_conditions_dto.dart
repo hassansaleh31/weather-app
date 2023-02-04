@@ -45,16 +45,16 @@ class MainConditionsDTO {
   });
 
   /// Creates a [MainConditionsDTO] from the supplied JSON object
-  factory MainConditionsDTO.fromJson(Map<String, dynamic> json) {
+  factory MainConditionsDTO.fromJson(Map<String, dynamic>? json) {
     return MainConditionsDTO(
-      temp: parseDouble(json['temp']),
-      feelsLike: parseDouble(json['feels_like']),
-      tempMin: parseDouble(json['temp_min']),
-      tempMax: parseDouble(json['temp_max']),
-      pressure: parseDouble(json['pressure']),
-      humidity: parseDouble(json['humidity']),
-      seaLevel: parseDouble(json['sea_level']),
-      grndLevel: parseDouble(json['grnd_level']),
+      temp: parseDouble(json?['temp']),
+      feelsLike: parseDouble(json?['feels_like']),
+      tempMin: parseDouble(json?['temp_min']),
+      tempMax: parseDouble(json?['temp_max']),
+      pressure: parseDouble(json?['pressure']),
+      humidity: parseDouble(json?['humidity']),
+      seaLevel: parseDouble(json?['sea_level']),
+      grndLevel: parseDouble(json?['grnd_level']),
     );
   }
 }

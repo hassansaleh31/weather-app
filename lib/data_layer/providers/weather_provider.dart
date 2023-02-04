@@ -1,6 +1,7 @@
 import '../../data_layer/dtos/current_weather_dto.dart';
 import '../../domain_layer/models/coordinates.dart';
 import '../networking/net_client.dart';
+import '../networking/net_endpoints.dart';
 import '../networking/net_request_methods.dart';
 
 /// Provides data about the weather
@@ -19,7 +20,7 @@ class WeatherProvider {
     bool forceRefresh = false,
   }) async {
     final response = await _netClient.request(
-      _netClient.netEndpoints.currentWeather,
+      NetEndpoints().currentWeather,
       method: NetRequestMethods.get,
       forceRefresh: forceRefresh,
       queryParameters: {

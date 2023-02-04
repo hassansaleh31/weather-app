@@ -14,7 +14,7 @@ class CurrentWeather extends Equatable {
   final Coordinates coordinates;
 
   /// Describes the general weather conditions
-  final WeatherConditions weather;
+  final List<WeatherConditions> weather;
 
   /// The main weather conditions
   final MainConditions mainConditions;
@@ -86,7 +86,7 @@ class CurrentWeather extends Equatable {
   /// Returns a copy of the current weather data modified by the provided data.
   CurrentWeather copyWith(
     Coordinates? coordinates,
-    WeatherConditions? weather,
+    List<WeatherConditions>? weather,
     MainConditions? mainConditions,
     int? visibility,
     Wind? wind,

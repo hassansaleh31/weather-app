@@ -15,10 +15,10 @@ class RainDTO {
   });
 
   /// Creates a [RainDTO] from the supplied JSON object
-  factory RainDTO.fromJson(Map<String, dynamic> json) {
+  factory RainDTO.fromJson(Map<String, dynamic>? json) {
     return RainDTO(
-      oneHour: parseDouble(json['1h']),
-      threeHour: parseDouble(json['3h']),
+      oneHour: parseDouble(json?['1h']),
+      threeHour: parseDouble(json?['3h']),
     );
   }
 }

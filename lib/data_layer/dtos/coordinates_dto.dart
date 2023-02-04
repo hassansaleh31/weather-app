@@ -15,10 +15,10 @@ class CoordinatesDTO {
   });
 
   /// Creates a [CoordinatesDTO] from the supplied JSON object
-  factory CoordinatesDTO.fromJson(Map<String, dynamic> json) {
+  factory CoordinatesDTO.fromJson(Map<String, dynamic>? json) {
     return CoordinatesDTO(
-      lon: parseDouble(json['lon']),
-      lat: parseDouble(json['lat']),
+      lon: parseDouble(json?['lon']),
+      lat: parseDouble(json?['lat']),
     );
   }
 }

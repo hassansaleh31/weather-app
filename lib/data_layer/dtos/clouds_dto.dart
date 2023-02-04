@@ -11,9 +11,9 @@ class CloudsDTO {
   });
 
   /// Creates a [CloudsDTO] from the supplied JSON object
-  factory CloudsDTO.fromJson(Map<String, dynamic> json) {
+  factory CloudsDTO.fromJson(Map<String, dynamic>? json) {
     return CloudsDTO(
-      all: parseInt(json['all']),
+      all: parseInt(json?['all']),
     );
   }
 }

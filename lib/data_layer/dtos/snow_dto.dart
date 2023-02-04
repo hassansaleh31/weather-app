@@ -15,10 +15,10 @@ class SnowDTO {
   });
 
   /// Creates a [SnowDTO] from the supplied JSON object
-  factory SnowDTO.fromJson(Map<String, dynamic> json) {
+  factory SnowDTO.fromJson(Map<String, dynamic>? json) {
     return SnowDTO(
-      oneHour: parseDouble(json['1h']),
-      threeHour: parseDouble(json['3h']),
+      oneHour: parseDouble(json?['1h']),
+      threeHour: parseDouble(json?['3h']),
     );
   }
 }

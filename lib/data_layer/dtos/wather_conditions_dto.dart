@@ -23,12 +23,20 @@ class WeatherConditionsDTO {
   });
 
   /// Creates a [WeatherConditionsDTO] from the supplied JSON object
-  factory WeatherConditionsDTO.fromJson(Map<String, dynamic> json) {
+  factory WeatherConditionsDTO.fromJson(Map<String, dynamic>? json) {
     return WeatherConditionsDTO(
-      id: parseInt(json['id']),
-      main: parseString(json['main']),
-      description: parseString(json['description']),
-      icon: parseString(json['icon']),
+      id: parseInt(json?['id']),
+      main: parseString(json?['main']),
+      description: parseString(json?['description']),
+      icon: parseString(json?['icon']),
     );
+  }
+
+  /// Creates a list of [WeatherConditionsDTO] from the supplied llist of
+  /// JSON objects
+  static List<WeatherConditionsDTO> fromJsonList(
+    List<Map<String, dynamic>> list,
+  ) {
+    return list.map(WeatherConditionsDTO.fromJson).toList(growable: false);
   }
 }

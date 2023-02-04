@@ -13,7 +13,7 @@ class CurrentWeatherDTO {
   final CoordinatesDTO? coordinates;
 
   /// Describes the general weather conditions
-  final WeatherConditionsDTO? weather;
+  final List<WeatherConditionsDTO>? weather;
 
   /// The main weather conditions
   final MainConditionsDTO? mainConditions;
@@ -66,21 +66,21 @@ class CurrentWeatherDTO {
   });
 
   /// Creates a [CurrentWeatherDTO] from the supplied JSON object
-  factory CurrentWeatherDTO.fromJson(Map<String, dynamic> json) {
+  factory CurrentWeatherDTO.fromJson(Map<String, dynamic>? json) {
     return CurrentWeatherDTO(
-      coordinates: CoordinatesDTO.fromJson(json['coord']),
-      weather: WeatherConditionsDTO.fromJson(json['weather']),
-      mainConditions: MainConditionsDTO.fromJson(json['main']),
-      visibility: parseInt(json['visibility']),
-      wind: WindDTO.fromJson(json['wind']),
-      clouds: CloudsDTO.fromJson(json['clouds']),
-      rain: RainDTO.fromJson(json['rain']),
-      snow: SnowDTO.fromJson(json['snow']),
-      dateTime: parseInt(json['dt']),
-      country: parseString(json['sys']?['country']),
-      sunrise: parseInt(json['sys']?['sunrise']),
-      sunset: parseInt(json['sys']?['sunset']),
-      timezone: parseInt(json['timezone']),
+      coordinates: CoordinatesDTO.fromJson(json?['coord']),
+      weather: WeatherConditionsDTO.fromJsonList(json?['weather']),
+      mainConditions: MainConditionsDTO.fromJson(json?['main']),
+      visibility: parseInt(json?['visibility']),
+      wind: WindDTO.fromJson(json?['wind']),
+      clouds: CloudsDTO.fromJson(json?['clouds']),
+      rain: RainDTO.fromJson(json?['rain']),
+      snow: SnowDTO.fromJson(json?['snow']),
+      dateTime: parseInt(json?['dt']),
+      country: parseString(json?['sys']?['country']),
+      sunrise: parseInt(json?['sys']?['sunrise']),
+      sunset: parseInt(json?['sys']?['sunset']),
+      timezone: parseInt(json?['timezone']),
     );
   }
 }

@@ -12,7 +12,6 @@ import '../../domain_layer/models/current_weather.dart';
 import '../../domain_layer/models/main_conditions.dart';
 import '../../domain_layer/models/rain.dart';
 import '../../domain_layer/models/snow.dart';
-import '../../domain_layer/models/weather_conditions.dart';
 import '../../domain_layer/models/wind.dart';
 import '../networking/json_parser.dart';
 
@@ -26,12 +25,10 @@ extension CurrentWeatherDTOMapping on CurrentWeatherDTO {
             longitude: 0,
             latittude: 0,
           ),
-      weather: weather?.toWeatherConditions() ??
-          WeatherConditions(
-            id: 0,
-            category: WeatherCondition.unknown,
-            description: '',
-          ),
+      weather: weather
+              ?.map((e) => e.toWeatherConditions())
+              .toList(growable: false) ??
+          [],
       mainConditions: mainConditions?.toMainConditions() ??
           MainConditions(
             temp: 0,
